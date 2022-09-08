@@ -32,6 +32,7 @@ obj-$(CONFIG_SENSORS_SSP_CM3323)	+= factory/light_cm3323.o
 
 obj-$(CONFIG_SENSORS_SSP_PROX_FACTORYCAL)	+= factory/prox_tmg399x.o
 obj-$(CONFIG_SENSORS_SSP_VCNL36811S)	+= factory/prox_vcnl36811s.o
+obj-$(CONFIG_SENSORS_SSP_PROX_AUTOCAL_AMS)	+= factory/prox_autocal_ams.o
 obj-$(CONFIG_SENSORS_SSP_LIGHT_COLORID) += factory/light_colorid.o
 obj-$(CONFIG_SENSORS_SSP_BMP182)	+= factory/pressure_bmp182.o
 obj-$(CONFIG_SENSORS_SSP_LPS25H)	+= factory/pressure_lps25h.o

@@ -131,6 +131,29 @@ static struct bbd_device bbd;
 static unsigned char bbd_patch[] = {
 #ifdef CONFIG_SENSORS_SSP_GTACTIVE3
 #include "q_os/bbd_patch_file_tab_active_3.h"
+#elif defined(CONFIG_SENSORS_SSP_STAR)
+#if ANDROID_VERSION < 90000
+#include "o_os/bbd_patch_file_star.h"
+#elif ANDROID_VERSION < 100000
+#include "p_os/bbd_patch_file_star.h"
+#include "q_os/bbd_patch_file_star.h"
+#endif
+#elif defined(CONFIG_SENSORS_SSP_CROWN)
+#if ANDROID_VERSION < 90000
+#include "o_os/bbd_patch_file_crown.h"
+#elif ANDROID_VERSION < 100000
+#include "p_os/bbd_patch_file_crown.h"
+#else
+#include "q_os/bbd_patch_file_crown.h"
+#endif
+#elif defined(CONFIG_SENSORS_SSP_HAECHI)
+#if ANDROID_VERSION < 90000
+#include "bbd_patch_file_haechi.h"
+#elif ANDROID_VERSION < 100000
+#include "p_os/bbd_patch_file_haechi.h"
+#else
+#include "q_os/bbd_patch_file_haechi.h"
+#endif
 #else
 #include "q_os/bbd_patch_file_anote.h"
 #endif
